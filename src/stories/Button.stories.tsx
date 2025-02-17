@@ -6,12 +6,24 @@ export default {
     component: Button
 }
 
-export const Primary = () => <Button variant='primary'>Primary</Button>;
-export const Secondary = () => <Button variant='secondary' >Secondary</Button>
-export const Danger = () => <Button variant='danger'>Danger</Button>
+// Older way Of doing variations 
+
+// export const Primary = () => <Button variant='primary'>Primary</Button>;
+// export const Secondary = () => <Button variant='secondary' >Secondary</Button>
+// export const Danger = () => <Button variant='danger'>Danger</Button>
 
 //Renaming Stories
 
-Primary.storyName = "Blue Button"
-Secondary.storyName = "Green Button"
-Danger.storyName = "Red Button"
+// Primary.storyName = "Blue Button"
+// Secondary.storyName = "Green Button"
+// Danger.storyName = "Red Button"
+
+// Newer way of doing variations of a component 
+
+export const Primary = {
+    args: {
+        primary: true,
+        label: "Button",
+        onclick: () => console.log("You Clicked me"),
+    }
+}
