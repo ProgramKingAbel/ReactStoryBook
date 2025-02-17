@@ -3,6 +3,19 @@ import Button2 from "./Button2.example";
 export default {
     title: "products/button",
     component: Button2,
+    parameters: {
+        layout: "centered",
+        controls: {
+            expanded: true,
+        },
+        backgrounds: {
+            default: "light",
+            values: [
+                {name: "light", value: "#fff"},
+                {name: "sky blue", value: "#00bcd4"},
+            ]
+        }
+    },
     argTypes: {
         backgroundColor: { control: "color" },
 
