@@ -24,6 +24,6 @@ export const Primary = {
     args: {
         primary: true,
         label: "Button",
-        onclick: () => console.log("You Clicked me"),
+        onClick: () => alert("You Clicked me"),
     }
 }
