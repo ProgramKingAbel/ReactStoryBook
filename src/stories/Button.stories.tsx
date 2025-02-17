@@ -1,5 +1,6 @@
 import React from "react";
 import Button from "./Button";
+import { FaHome } from "react-icons/fa";
 
 export default {
     title: 'products/buttons',
@@ -25,5 +26,13 @@ export const Primary = {
         primary: true,
         label: "Button",
         onClick: () => alert("You Clicked me"),
+        loading: false,
+        size: 'medium',
+        color: '#007bff',
+        fullWidth: false,
+        icon: <FaHome />,
+        iconPosition: 'left',
+        ariaLabel: 'primary-button',
+
     }
 }
