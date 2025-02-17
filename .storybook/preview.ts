@@ -1,4 +1,5 @@
 import type { Preview } from "@storybook/react";
+import { withBackgroundColor } from "./decorators";
 
 const preview: Preview = {
   parameters: {
@@ -10,5 +11,7 @@ const preview: Preview = {
     },
   },
 };
+
+export const decorators = [withBackgroundColor]
 
 export default preview;

@@ -4,7 +4,21 @@ import { FaHome } from "react-icons/fa";
 
 export default {
     title: 'products/buttons',
-    component: Button
+    component: Button,
+    // Component Only Decorator
+    decorators: [
+        (Story: any) => (
+          <div
+            style={{
+              padding: "20px",
+              backgroundColor: "#f0f0f0",
+              borderRadius: "8px",
+            }}
+          >
+            <Story />
+          </div>
+        ),
+      ],
 }
 
 // Older way Of doing variations 
@@ -34,6 +48,21 @@ export const Primary = {
         iconPosition: 'left',
         ariaLabel: 'primary-button',
 
-    }
+    },
+
+    // Variant Level Decorator 
+    decorators: [
+        (Story: any) => (
+          <div
+            style={{
+              padding: "20px",
+              backgroundColor: "#f0f0f0",
+              borderRadius: "8px",
+            }}
+          >
+            <Story />
+          </div>
+        ),
+      ],
 }
 
