@@ -1,25 +1,63 @@
 import React from "react";
-import Button from "./Button";
+import Button, { ButtonProps} from "./Button";
 import { FaHome } from "react-icons/fa";
+import { Meta, StoryObj } from "@storybook/react";
 
-export default {
-    title: 'products/buttons',
+
+// export default {
+//     title: 'products/buttons',
+//     component: Button,
+//     // Component Only Decorator
+//     decorators: [
+//         (Story: any) => (
+//           <div
+//             style={{
+//               padding: "20px",
+//               backgroundColor: "#f0f0f0",
+//               borderRadius: "8px",
+//             }}
+//           >
+//             <Story />
+//           </div>
+//         ),
+//       ],
+// }
+
+const meta: Meta<ButtonProps> = {
+    title: "Components/Button",
     component: Button,
-    // Component Only Decorator
-    decorators: [
-        (Story: any) => (
-          <div
-            style={{
-              padding: "20px",
-              backgroundColor: "#f0f0f0",
-              borderRadius: "8px",
-            }}
-          >
-            <Story />
-          </div>
-        ),
-      ],
-}
+    argTypes: {
+      color: { control: "color" },
+      label: { control: "text" },
+
+    },
+  };
+  
+  export default meta;
+  
+  export const Default: StoryObj<ButtonProps> = {
+    args: {
+      label: "Click Me",
+      color: "#007bff",
+
+    },
+  };
+  
+  export const Disabled: StoryObj<ButtonProps> = {
+    args: {
+      label: "Disabled Button",
+      color: "#888",
+ 
+    },
+  };
+  
+  export const Red: StoryObj<ButtonProps> = {
+    args: {
+      label: "Red Button",
+      color: "#ff0000",
+
+    },
+  };
 
 // Older way Of doing variations 
 
